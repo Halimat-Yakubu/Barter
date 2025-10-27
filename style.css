@@ -9,7 +9,11 @@ body {
     width: 100vw;
 }
 
-.headercontainer {
+.navbar {
+    display: none;
+}
+
+ .headercontainer {
     width: 15rem;
     display: flex;
     justify-content: space-evenly;
@@ -47,7 +51,8 @@ body {
     background-color:#836196;
     transform: translateY(-3px);
     transition: 0.3s ease-in-out;
-}
+} 
+
 header {
     width: 100vw;
     height: 5rem;
@@ -56,9 +61,8 @@ header {
     justify-content: space-between;
     gap: 6rem;
     margin: 0;
-    border-bottom: 1px #0A0B06 solid;
+    border-bottom: 1px gray solid;
 }
-
 
 .firstscreen {
     height: 90vh;
@@ -69,7 +73,6 @@ header {
     /* portfolio idea: 
     background-image: linear-gradient(to bottom, #f8ebe3, #0A0B06); */
 }
-
 
 .down {
     margin-top: 5vh;
@@ -96,13 +99,43 @@ header {
 
 .long {
     grid-row: 1 / span 2;
-    padding-top: 20rem;
+    padding-top: 18rem;
     padding-left: 3vw;
+    padding-right: 1vw;
+    line-height: 2em;
+    font-size: 18px;
+}
+
+.long h2 {
+    line-height: 3rem;
+    font-weight: 600;
 }
 
 .short {
-    padding-top: 2rem;
+    padding-top: 1.5rem;
     padding-left: 3vw;
+    padding-right: 1vw;
+    font-size: 18px;
+    height: 100%
+}
+
+.short h2 {
+  font-weight: 600;
+  font-size: 25px;
+}
+
+.short img {
+    border-radius: 10%;
+    width: 80%;
+    height: 15rem;
+}
+
+.buzz {
+    width: 100%;
+    height: 65%;
+    display: flex;
+    align-items: center;
+    justify-content: center;;
 }
 
 .one {
@@ -140,7 +173,6 @@ header {
     color: #2b2d42;
 }
 
-
 #thirdscreen {
    display: flex;
    justify-content: space-between;
@@ -153,26 +185,33 @@ header {
 }
 
 .side {
-    width: 35%;
     padding-top: 20vh;
+    padding-left: 1rem;
     color: #F8EBE3;
 }
 
 .side h1 {
-    font-size: 55px;
+    font-size: 50px;
+    width: 100%;
 }
 
 .side p {
     font-size: 25px;
     margin-top: 7vh;
-    line-height: 30px;
+    line-height: 25px;
+    margin-bottom: 5vh;
 }
 
 .img {
     border-radius: 7%;
-    height: 90vh;
-    width: 33vw;
+    width: 100%;
     margin-bottom: 9vh;
+}
+
+.imagecontainer {
+    padding-left: 3vw;
+    width: 55%;
+    text-align: center;
 }
 
 #zero, #one, #two, #three {
@@ -180,6 +219,7 @@ header {
     justify-content: space-evenly;
     width: 70vw;
     margin-top: 7vh;
+    gap: 3rem
 }
 
 .bar {
@@ -195,7 +235,6 @@ header {
 .choices {
     margin-bottom: 2rem;
 }
-
 
 .imgscontainer {
     width: 68vw;
@@ -218,13 +257,30 @@ header {
     margin: 1rem;
 }
 
+#colorcontainer p {
+    font-size: 25px;
+    padding-left: 3vw;
+}
+
+#colorcontainer ul {
+    font-size: 20px;
+    padding-left: 7vw;
+    padding-right: 7vw;
+    line-height: 32px;
+    margin-top: 4rem;
+}
+
+#step2, #step3, #step4 {
+    display: none;
+}
+
 #assembly {
     display: flex;
     justify-content: center;
     gap: 9vw;
     width: 100vw;
     height: 35vh;
-    border-bottom: 0.5px black solid;   
+    border-bottom: 0.5px gray solid;   
 }
 
 .straightp {
@@ -258,8 +314,9 @@ header {
 
 #info {
     padding-left: 3vw;
-    padding-top: 5vh;
-    font-size: 30px;
+    padding-top: 8vh;
+    font-size: 33px;
+    font-weight: 600;
 }
 
 #newsletter1 {
@@ -271,55 +328,117 @@ header {
     padding-left: 3vw;
 }
 
-@media (max-width: 800px) {
-
-    .headercontainer {
-        gap: 5px;
+@media screen and (max-width: 800px) {
+    
+    
+    .headercontainer, .logo {
+        display: none;
     }
 
-    .top1 , .top2 {
-        font-size: 11px;
+    .navbar {
+        display: block;
+        border-bottom: 1.5px #0A0B06 solid;
+        background-color: #F8EBE3;
+        padding: 0;
     }
 
+    .container-fluid {
+         background-color: #F8EBE3;
+         padding-top: 0.5em;
+         padding-bottom: 0.5em;
+    }
+
+    .offcanvas {
+        background-color: #F8EBE3;
+        max-width: 300px;
+    }
+
+    .logo2 {
+        font-size: 1.8rem;
+        font-weight: 800;
+        padding-left: 3vw;
+        margin-bottom: 0;
+    }
+    
+   .navbar-toggler {
+        margin-right: 5vw;
+   } 
+
+   .navbar-toggler {
+        color: #2b2d42;
+   }
 
     header {
         justify-content: space-evenly;
+        border: none;
+         background-color: #F8EBE3;
     }
 
     #maincontainer {
         grid-template-columns: 1fr 1fr;
+        height: 100%;
     }
 
     .long {
-        padding-top: 13rem;
+        padding-top: 1rem;
+        font-size: 1rem;
+        padding-right: 2vw;
+    }
+
+    .long h2 {
+        font-size: 1.3rem;
+        line-height: 27px;
+    }
+
+    .short h2 {
+        font-size: 1.2rem;
+        margin-top: 0;
+    }
+
+    .short {
+        font-size: 1rem;
+        line-height: 1.5rem;
+          padding-right: 2vw;
+    }
+
+    .buzz {
+        display: none;
     }
 
     #thirdscreen {
         display: block;
+        width: 100vw;
     }
 
     .side {
     margin-top: 2vh;
-    padding: 2vh 3vw 0 5vw;
+    padding: 2vh 7vw 0 5vw;
     width: 100vw;
+    margin-left: 7.1vw;
     }
     
     .side h1 {
-        font-size: 45px;
+        font-size: 43px;
     }
 
     .side p {
         font-size: 20px;
         margin-top: 2vh;
         line-height: 30px;
+        margin-right: 3vw;
     }
 
     .img {
         height: 35vh;
-        width: 80vw;
-        padding-left: 5vw;
+        width: 75%;
         margin: 5vh 0 1vh 0 ;
+        padding-left: 0;
         /* TLBR*/
+    }
+
+    .imagecontainer {
+        text-align: center;
+        width: 100%;
     }
 
     #zero, #one, #two, #three {
@@ -344,9 +463,10 @@ header {
         height: 65vh;
     }
 
-    #fourthscreen {
-        display: block;
+    .bar, .imgscontainer, #fourthscreen {
+        display: none;
     }
+
 
     .bar h2 {
         font-size: 22px;
@@ -365,18 +485,23 @@ header {
     #assembly {
     gap: 3vw;
     width: 100vw;
-    height: 18vh;  
+    height: 17vh;  
     padding-left: 3vw;
 }
 
+#straight {
+     padding-top: 4vh;
+}
+
     .straightp {
-        width: 4rem;
-        height: 4rem;
+        width: 3.5rem;
+        height: 3.5rem;
         display: flex;
         justify-content: center;
-         align-items: center;
+        align-items: center;
         border-radius: 50%;
-        font-size: 15px;
+        border: none;
+        font-size: 16px;
     } 
 
     #straight h2 {
@@ -395,13 +520,14 @@ header {
 
 }
 
-@media (max-width: 1024px) {
+@media screen and (min-width: 801px) and (max-width: 1024px){
     #maincontainer {
         grid-template-columns: 1fr 1fr;
     }
 
     #thirdscreen {
         display: block;
+        width: 100vw;
     }
 
     #sidebar {
@@ -410,9 +536,12 @@ header {
 
     .side {
     margin-top: 2vh;
-    padding: 2vh 3vw 0 5vw;
-    width: 78vw;
+    padding: 2vh 7vw 0 5vw;
+    width: 100vw;
+    width: 70vw;
+    margin-left: 10vw;
     }
+
     
     .side h1 {
         font-size: 45px;
@@ -421,16 +550,19 @@ header {
     .side p {
         font-size: 20px;
         margin-top: 2vh;
+        margin-bottom: 0;
         line-height: 30px;
     }
 
-    .img {
-        height: 35vh;
-        width: 65vw;
-        padding-left: 5vw;
+   .img { height: 35vh;
+        width: 70%;
         margin: 5vh 0 1vh 0 ;
-        /* TLBR*/
-    }
+        padding-left: 0;}
+
+    .imagecontainer {
+        text-align: center;
+        width: 100vw;
+    }    
 
     #zero, #one, #two, #three {
         display: block;
@@ -458,6 +590,7 @@ header {
         font-size: 22px;
         margin-bottom: 7vh;
         padding: 0;
+        padding-top: 5vh;
     }
 
     .bar p {
@@ -470,19 +603,17 @@ header {
     #assembly {
     gap: 3vw;
     width: 100vw;
-    height: 18vh;  
+    height: 17vh;  
     padding-left: 3vw;
 }
 
     .straightp {
-        width: 4rem;
-        height: 4rem;
+        width: 5rem;
+        height: 5rem;
         display: flex;
         justify-content: center;
          align-items: center;
-        border-radius: 50%;
-        font-size: 18px;
+        border-radius: 50;
+        /* font-size: 18px; */
     } 
 }
-
-
