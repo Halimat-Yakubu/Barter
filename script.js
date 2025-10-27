@@ -19,9 +19,9 @@
     //we use a function to add multiple onclick actions to a particular html element. 
     // if its just one, do it on the element directly
    
-    let colorContainer = document.getElementById("info")
+     let colorContainer = document.getElementById("info")
 
-    let firstText ="Darling hold my hand!";
+    let firstText ="";
     let newText0 ="Nothing beats a jet2 holiday!";
     let newText1 = "And right now, you can get 50 pounds off, per Person!";
     let newText2 ="That's 200 pounds off for a family of four.";
@@ -29,29 +29,32 @@
 
     function colorChange () {
         document.getElementById("colorcontainer").style.backgroundColor =  '#836196';
-        
-        colorContainer.innerText = firstText
+        document.getElementById("step1").style.display = 'block'
+        document.getElementById("step2").style.display=  'none' ;
+        document.getElementById("step3").style.display = 'none'
+        document.getElementById("step4").style.display=  'none';
     }
 
     function colorchange0 () {
         document.getElementById("colorcontainer").style.backgroundColor =  '#e8a169' ;
-         
-         colorContainer.innerText = newText0;
+        document.getElementById("step1").style.display = 'none';
+        document.getElementById("step2").style.display=  'block';
+        document.getElementById("step3").style.display=  'none';
+        document.getElementById("step4").style.display=  'none';
        }
 
     function colorchange1 () {
         document.getElementById("colorcontainer").style.backgroundColor = '#f0969aff' ;
-         
-         colorContainer.innerText = newText1;
+        document.getElementById("step1").style.display = 'none'
+        document.getElementById("step2").style.display = 'none'
+        document.getElementById("step3").style.display=  'block';
+        document.getElementById("step4").style.display=  'none'
        }
 
     function colorchange2 () {
         document.getElementById("colorcontainer").style.backgroundColor = '#727597ff' ;
-         
-         colorContainer.innerText = newText2;
+        document.getElementById("step1").style.display = 'none'
+        document.getElementById("step2").style.display=  'none' ;
+        document.getElementById("step3").style.display = 'none'
+        document.getElementById("step4").style.display=  'block' ;
        }
-
-    
-    
-
-    
